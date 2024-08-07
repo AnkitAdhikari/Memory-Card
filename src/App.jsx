@@ -2,12 +2,18 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import CardsPage from "./components/CardsPage";
 import getPokemonFormatted from "./services/fetchPoke";
-const pokeList = await getPokemonFormatted();
 function App() {
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
   const [clicked, setClicked] = useState([]);
-  const [lists, setLists] = useState(pokeList);
+  const [lists, setLists] = useState([]);
+
+  useEffect(() => {
+    async function fechData() {
+      setLists(await getPokemonFormatted());
+    }
+    fechData();
+  }, []);
 
   useEffect(() => {
     if (score > highScore) {
