@@ -28,16 +28,39 @@ function App() {
     setLists(suffledArray);
   }
 
+  async function newCardHandler() {
+    setLists(await getPokemonFormatted());
+    setScore(0);
+    setHighScore(0);
+  }
+
   return (
     <>
       <div className='heading'>
         <h1>Welcome to memory card game</h1>
         <div className='scores'>
+          <button
+            className='btn btn-new'
+            type='button'
+            onClick={newCardHandler}
+          >
+            New Cards
+          </button>
           <div className='score'>score: {score}</div>
           <div className='high-score'>highscore: {highScore}</div>
         </div>
       </div>
       <CardsPage handleClick={handleClick} pokeList={lists} />
+      <div className='footer'>
+        icon author attribute
+        <a target='_blank' href='https://icons8.com/icon/TYcqVDaDnqWb/pokeball'>
+          pokemon
+        </a>{" "}
+        icon by{" "}
+        <a target='_blank' href='https://icons8.com'>
+          Icons8
+        </a>
+      </div>
     </>
   );
 }
