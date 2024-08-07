@@ -1,0 +1,26 @@
+.card {
+  border: 2px solid green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 200ms;
+  height: 300px;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: rgb(17 17 26 / 18%) 0px 0px 16px;
+  transform: rotate(1deg);
+  cursor: pointer;
+}
+
+.pokemon-img {
+  width: 200px;
+  height: 200px;
+}
+
+.poke-name {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}

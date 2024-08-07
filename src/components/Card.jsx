@@ -1,8 +1,13 @@
+import "../styles/card.css";
 export default function Card({ pokemonName, imgUrl }) {
   return (
-    <div>
+    <div className='card'>
       <div className='poke-img'>
-        <img src={imgUrl} alt={pokemonName + " photo"} />
+        <img
+          className='pokemon-img'
+          src={imgUrl}
+          alt={pokemonName + " photo"}
+        />
       </div>
       <p className='poke-name'>{pokemonName}</p>
     </div>

@@ -1,8 +1,9 @@
+import "../styles/cardspage.css";
 import Card from "./Card";
 
 export default function CardsPage({ pokeList }) {
   return (
-    <>
+    <div className='cards-container'>
       {pokeList.map((el) => {
         console.log(el);
         return (
@@ -11,6 +12,6 @@ export default function CardsPage({ pokeList }) {
           </div>
         );
       })}
-    </>
+    </div>
   );
 }

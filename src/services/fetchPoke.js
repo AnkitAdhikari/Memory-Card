@@ -1,7 +1,7 @@
-const URL = `https://pokeapi.co/api/v2/pokemon?limit=10&offset=`
+const URL = `https://pokeapi.co/api/v2/pokemon?limit=12&offset=`
 
 function randomOffSet() {
-    return Math.floor(Math.random() * 639) + 1;
+    return Math.floor(Math.random() * 637) + 1;
 }
 
 async function getPokemon() {
